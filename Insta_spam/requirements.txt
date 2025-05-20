@@ -6,3 +6,6 @@ scikit-learn
 pillow
 requests
 joblib
+re
+os
+io
