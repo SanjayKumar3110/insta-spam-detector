@@ -1,0 +1,8 @@
+streamlit
+instaloader
+pandas
+numpy
+scikit-learn
+pillow
+requests
+joblib
