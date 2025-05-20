@@ -10,8 +10,11 @@ from PIL import Image
 from io import BytesIO
 
 # Load model and dataset
-model = joblib.load("instagram_fake_detection.pkl")
-df = pd.read_csv("instagram_comments.csv")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "instagram_fake_detection.pkl")
+DATASET_PATH = os.path.join(os.path.dirname(__file__), "instagram_comments.csv")
+
+model = joblib.load(MODEL_PATH)
+df = pd.read_csv(DATASET_PATH)
 
 # Define features
 feature_columns = [
