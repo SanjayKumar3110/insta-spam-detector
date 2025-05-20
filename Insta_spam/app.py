@@ -1,6 +1,7 @@
 import streamlit as st
 import instaloader      
 import re
+import os
 import joblib
 import pandas as pd
 import numpy as np
