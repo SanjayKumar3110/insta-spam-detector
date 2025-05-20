@@ -32,6 +32,7 @@ A **Streamlit web app** that predicts whether an Instagram account is **fake or 
 ## 📁 File Structure
 
 📦instagram-spam-detector
+
 ┣ 📄 app.py # Streamlit app for user interaction
 ┣ 📄 core.py # Training script for the model
 ┣ 📄 instagram_comments.csv # Dataset used for training
@@ -47,7 +48,7 @@ A **Streamlit web app** that predicts whether an Instagram account is **fake or 
 ```bash
 # Clone the repository
 git clone https://github.com/SanjayKumar3110/insta-spam-detector.git
-cd instagram-spam-detector
+cd insta-spam
 
 # Install dependencies
 pip install -r requirements.txt
