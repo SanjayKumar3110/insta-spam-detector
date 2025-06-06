@@ -45,7 +45,7 @@ st.markdown("Enter an Instagram profile URL to detect spam account probability."
 def get_loader():
     L = instaloader.Instaloader()
     try:
-        L.load_session_from_file("insta username") # replace this with your instagram account(optional)
+        L.load_session_from_file() # replace this with your instagram account(optional)
     except Exception:
         pass
     return L
