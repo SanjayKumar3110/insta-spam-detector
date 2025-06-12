@@ -9,6 +9,7 @@ from sklearn.preprocessing import StandardScaler
 import requests
 from PIL import Image
 from io import BytesIO
+from dotenv import load_dotenv
 
 # Load model and dataset
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "instagram_fake_detection.pkl")
@@ -16,6 +17,9 @@ DATASET_PATH = os.path.join(os.path.dirname(__file__), "instagram_comments.csv")
 
 model = joblib.load(MODEL_PATH)
 df = pd.read_csv(DATASET_PATH)
+
+load_dotenv(dotenv_path=".env")
+USERNAME = os.getenv("INSTAGRAM_USERNAME")
 
 # Define features
 feature_columns = [
@@ -45,7 +49,7 @@ st.markdown("Enter an Instagram profile URL to detect spam account probability."
 def get_loader():
     L = instaloader.Instaloader()
     try:
-        L.load_session_from_file() # replace this with your instagram account(optional)
+        L.load_session_from_file(USERNAME) # replace this with your instagram account(optional)
     except Exception:
         pass
     return L
